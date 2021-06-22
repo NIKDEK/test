@@ -1,7 +1,12 @@
 import requests, json, base64
 
 auth_type = 'Basic'
-creds = '{}:{}'.format('admin', 'S83H4448JD8')
+with open('apipass.json', 'r') as api_info:
+    user_info = json.loads(api_info.read())["User"][0]
+    print(user_info)
+    creds = '{}:{}'.format(user_info[0], user_info[1])
+    print(creds)
+    api_info.close()
 auth_b64 = base64.b64decode(creds)
 
 def get():

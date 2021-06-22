@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.secret_key = b"_93JE93JR9R49RTI"
 
 info = {'Users':['TEST1']}
+
 credentials = {'creds': ['admin:S83H4448JD8']}
 
 @app.route('/users', methods=['GET', 'POST', 'PUT', 'DELETE'])
