@@ -26,6 +26,10 @@ def post(jsn):
         raise Exception(err_handler(res))
     return str(res.status_code)
 
-inf = json.loads(get())
 
+inf = json.loads(get())
 print(json.loads(post({'User':'tst'})))
+
+
+# git stash
+# git stash pop
