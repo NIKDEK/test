@@ -27,5 +27,4 @@ def post(jsn):
     return str(res.status_code)
 
 inf = json.loads(get())
-
 print(json.loads(post({'User':'tst'})))
